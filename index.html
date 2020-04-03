@@ -25,11 +25,8 @@
 		<script type="text/javascript">
 			require([
 				'sammy',
-				'page/page',
-				'page/page2',
 				'page/dashboard'
-			], function(sammy, obj, obj2, dashboard, transaksiUmum, transaksiUmum2, transaksiUmum3, transaksiUmum4, order, order2, permintaan_sj, permintaan_sjp, hutang_umum, hutang_barang
-				, laporan, jurnal, bkk, hutang, neraca, neracaBulan){
+			], function(sammy, dashboard){
 					var app = sammy(function() {
 						// master data release
 						this.get('#/', function() {

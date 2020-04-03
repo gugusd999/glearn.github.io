@@ -19,6 +19,8 @@
         neraca: "lib/neraca",
         neracaBulan: "lib/neracaBulan",
         terbilang: "lib/terbilang.min",
+        main: "page/config/main",
+        baseurl: "page/config/baseurl",
         bootstrap: 'jsb/bootstrap.min',
         "datatables.net": 'lib/jquery.dataTables.min',
         "datatables": 'lib/dataTables.bootstrap4.min',

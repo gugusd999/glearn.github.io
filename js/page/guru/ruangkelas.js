@@ -1,4 +1,4 @@
-define(['jquery', 'main', 'helper', 'frb', 'bootstrap'], function($, main, helper, frb, firebase, bootstrap) {
+define(['jquery', 'main', 'helper', 'frb'], function($, main, helper, frb, firebase) {
 
   const dashboard = {
     view: async function() {

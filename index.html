@@ -26,12 +26,20 @@
 		<script type="text/javascript">
 			require([
 				'sammy',
-				'page/dashboard'
-			], function(sammy, dashboard){
+				'page/dashboard',
+				'page/ruangguru',
+				'page/guru/ruangkelas'
+			], function(sammy, dashboard, ruangguru, ruangkelas){
 					var app = sammy(function() {
 						// master data release
 						this.get('#/', function() {
 							dashboard.view();
+						});
+						this.get('#/ruang-guru', function() {
+							ruangguru.view();
+						});
+						this.get('#/ruang-guru/ruang-kelas', function() {
+							ruangkelas.view();
 						});
 					});
 					app.run("#/");

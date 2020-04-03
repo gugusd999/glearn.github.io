@@ -17,6 +17,7 @@
         hutang: "lib/hutang",
         bkk: "lib/bkk",
         neraca: "lib/neraca",
+        frb: "lib/frb",
         neracaBulan: "lib/neracaBulan",
         terbilang: "lib/terbilang.min",
         main: "page/config/main",
@@ -27,6 +28,9 @@
         inputmask: "lib/dist/inputmask",
         dependencyLib: "lib/dist/dependencyLib",
         jQueryInputmask: "lib/dist/jquery.inputmask",
+        '@firebase/app': 'firebase/firebase-app',
+        '@firebase/auth': 'firebase/firebase-auth',
+        '@firebase/database': 'firebase/firebase-database'
       },
       shim: {
         // we get an error that "jQuery is not defined" error without this
@@ -38,7 +42,7 @@
         jQueryInputmask: {
             deps: ["jquery", "inputmask"],
             exports: "$"
-        },
+        }
     }
   });
 

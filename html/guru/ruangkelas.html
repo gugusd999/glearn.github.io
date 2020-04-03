@@ -28,7 +28,9 @@
 <div class="container-fluid mt-3">
   <div class="row">
     <div class="col-sm-12">
-      <button type="button" class="btn btn-primary" name="button">Buat Kelas</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        Buat kelas baru
+      </button>
     </div>
   </div>
 </div>
@@ -66,3 +68,37 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Buat Kelas Baru</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="">Pilih Jenjang</label>
+          <select class="form-control" required name="jenjang">
+            <option value=""> pilih </option>
+            <option value="SD"> SD </option>
+            <option value="SMP"> SMP </option>
+            <option value="SMA/K"> SMA/K </option>
+            <option value="SMA/K"> Kuliah </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Pilih Kelas</label>
+          <input type="text" class="form-control" name="kelas" value="">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

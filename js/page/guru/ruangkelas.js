@@ -1,6 +1,4 @@
-define(['jquery', 'main', 'helper', 'frb', 'bootstrap'], function($, main, helper, frb, firebase,  popper, bootstrap) {
-
-  window.Popper = popper;
+define(['jquery', 'main', 'helper', 'frb', 'bootstrap'], function($, main, helper, frb, firebase, bootstrap) {
 
   const dashboard = {
     view: async function() {

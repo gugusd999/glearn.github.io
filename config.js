@@ -45,11 +45,16 @@
             deps: ["jquery", "inputmask"],
             exports: "$"
         },
-        popper: {
-            'deps': ['jquery'],
-            'exports': 'Popper'
+        bootstrap: {
+            deps: [
+                'jquery'
+            ]
         },
-        "bootstrap" : ["jquery"]
+        map: {
+          '*':{
+            'popper': 'popper'
+          }
+        }
     }
   });
 

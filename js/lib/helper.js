@@ -376,6 +376,10 @@ define(['jquery', 'main', 'axios', 'aes', 'baseurl'], function($, main, axios, o
       return sessionStorage.getItem(a);
   }
 
+  helper.sesiRemove = function(a){
+    return sessionStorage.removeItem(a);
+  }
+
   helper.encryptG = function(data){
 
     let dataB = JSON.stringify(data);

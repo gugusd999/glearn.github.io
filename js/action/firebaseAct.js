@@ -136,7 +136,10 @@ function create(obj, key, tableName){
 
 $("body").on('click', '[guru-log-out]', function(event){
   event.preventDefault();
-   alert('ok');
+
+  helper.sesiRemove('glearn-guru');
+
+  location.href = '#/guru/login';
 
 })
 

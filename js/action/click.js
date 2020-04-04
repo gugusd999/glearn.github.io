@@ -41,7 +41,7 @@ define(['jquery', 'helper', 'select2'], function($, helper, select2){
     let go = $(this).attr('data-go');
     location.href = go;
     location.reload();
-    
+
   })
 
 
@@ -49,14 +49,64 @@ define(['jquery', 'helper', 'select2'], function($, helper, select2){
 
     let Div = $(this).attr('data-position');
 
-
-
     helper.printDiv(Div);
+  })
+
+
+  $("body").on('click', '[modal-open]', function(event){
+    event.preventDefault();
+
+    let target = $(this).attr('modal-target');
+
+    $(`body #${target}`).css('display', 'block');
+
+    $(`body [modal-close]`).attr('modal-target', target);
 
 
   })
 
+  $("body").on('click', '[modal-close]', function(event){
+    event.preventDefault();
 
+    let target = $(this).attr('modal-target');
+
+    $(`body #${target}`).css('display', 'none');
+
+  })
+
+
+
+  // pilih Jenjang
+
+
+  $("body").on("change", "[pilihan-jenjang]", function(event){
+    event.preventDefault();
+
+    let nilai = $(this).val();
+
+    let option = `<option value=""> pilih </option>`;
+
+    if (nilai === "SD") {
+      for (var i = 1; i <= 6; i++) {
+        option += `<option value="${i}"> ${i} </option>`;
+      }
+    }
+
+    if (nilai === "SMP") {
+      for (var i = 7; i <= 9; i++) {
+        option += `<option value="${i}"> ${i} </option>`;
+      }
+    }
+
+    if (nilai === "SMA/K") {
+      for (var i = 10; i <= 12; i++) {
+        option += `<option value="${i}"> ${i} </option>`;
+      }
+    }
+
+    $(`body [pilihan-kelas]`).html(option);
+
+  })
 
 
 })

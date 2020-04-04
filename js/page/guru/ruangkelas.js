@@ -2,7 +2,11 @@ define(['jquery', 'main', 'helper', 'frb'], function($, main, helper, frb, fireb
 
   const dashboard = {
     view: async function() {
-      await helper.template('html/guru/ruangkelas.html');
+      if (helper.sesiGet('glearn-guru') === null) {
+        location.href="#/guru/login";
+      }else{
+        await helper.template('html/guru/ruangkelas.html');
+      }
     }
   }
 

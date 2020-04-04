@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./css/select2.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<link rel="stylesheet" href="./icon/icon.css">
+		<link rel="stylesheet" href="./css/w3.css">
 		<!-- <link rel="stylesheet" href="./cssPrint/style.css"> -->
 		<style media="screen">
 			td, th{
@@ -28,13 +29,22 @@
 			require([
 				'sammy',
 				'page/dashboard',
+				'page/guru/login',
+				'page/guru/daftar',
 				'page/ruangguru',
-				'page/guru/ruangkelas'
-			], function(sammy, dashboard, ruangguru, ruangkelas){
+				'page/guru/ruangkelas',
+				'action/click'
+			], function(sammy, dashboard, login, daftar, ruangguru, ruangkelas){
 					var app = sammy(function() {
 						// master data release
 						this.get('#/', function() {
 							dashboard.view();
+						});
+						this.get('#/guru/login', function() {
+							login.view();
+						});
+						this.get('#/guru/daftar', function() {
+							daftar.view();
 						});
 						this.get('#/ruang-guru', function() {
 							ruangguru.view();

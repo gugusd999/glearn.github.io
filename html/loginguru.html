@@ -35,14 +35,14 @@
         <div class="container">
           <div class="form-group">
             <label for="">Username :</label>
-            <input type="text" data-table="akun-guru" name="username" class="form-control" placeholder="exp: gugus" value="">
+            <input type="text" data-table="guru/akun-guru" name="username" class="form-control" placeholder="exp: gugus" value="">
           </div>
           <div class="form-group">
             <label for="">Password :</label>
-            <input type="password"  data-table="akun-guru" name="password" class="form-control" placeholder="exp: ******************" value="">
+            <input type="password"  data-table="guru/akun-guru" name="password" class="form-control" placeholder="exp: ******************" value="">
           </div>
           <div class="form-group">
-            <button type="button" class="btn btn-success" name="button">Log In</button>
+            <button type="button" data-login data-key="username" data-auth="password" get-data="guru/akun-guru" class="btn btn-success" name="button">Log In</button>
           </div>
         </div>
       </div>

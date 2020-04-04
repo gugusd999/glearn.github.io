@@ -26,7 +26,7 @@
     <div class="col-sm-12 text-center">
       <h3>Selamat Datang di Pendaftaran</h3>
     </div>
-    <div class="col-sm-6  mt-3">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6  mt-3">
       <div class="card">
         <div class="card-body text-center" id="crud">
           <img class="img-fluid img-menu" src="./asset/icon-guru.svg" alt="">
@@ -35,30 +35,30 @@
         <div class="container">
           <div class="form-group">
             <label for="">Nama Lengkap :</label>
-            <input type="text" name="nama" class="form-control" placeholder="exp: Gugus Darmayanto" value="">
+            <input type="text" data-table="akun-guru" name="nama" class="form-control" placeholder="exp: Gugus Darmayanto" value="">
           </div>
           <div class="form-group">
             <label for="">No Telp :</label>
-            <input type="telp" name="telp" class="form-control" placeholder="exp: 085800******" value="">
+            <input type="telp" data-table="akun-guru" name="telp" class="form-control" placeholder="exp: 085800******" value="">
           </div>
           <div class="form-group">
             <label for="">email :</label>
-            <input type="email" name="email" class="form-control" placeholder="exp: gugus@mail.com" value="">
+            <input type="email" data-table="akun-guru" name="email" class="form-control" placeholder="exp: gugus@mail.com" value="">
           </div>
           <div class="form-group">
             <label for="">Singkat Tentang Anda :</label>
-            <textarea type="text" name="story" class="form-control" placeholder="exp: saya seorang ..."></textarea>
+            <textarea type="text" data-table="akun-guru" name="story" class="form-control" placeholder="exp: saya seorang ..."></textarea>
           </div>
           <div class="form-group">
             <label for="">Username :</label>
-            <input type="text" name="username" class="form-control" placeholder="exp: gugus" value="">
+            <input type="text" data-table="akun-guru" name="username" class="form-control" placeholder="exp: gugus" value="">
           </div>
           <div class="form-group">
             <label for="">Password :</label>
-            <input type="password" name="password" class="form-control" placeholder="exp: ******************" value="">
+            <input type="password" data-table="akun-guru" name="password" class="form-control" placeholder="exp: ******************" value="">
           </div>
           <div class="form-group">
-            <button type="button" class="btn btn-success">Daftar</button>
+            <button type="button" data-simpan  get-data="akun-guru" class="btn btn-success">Daftar</button>
             <a href="#/guru/login" type="button" class="btn btn-default" name="button">Log In</a>
           </div>
         </div>

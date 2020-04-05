@@ -60,7 +60,9 @@
               <input type="password" required data-table="guru/akun-guru" name="password" class="form-control" placeholder="exp: ******************" value="">
             </div>
             <div class="form-group">
-              <button type="submit" data-simpan data-key="username"  get-data="guru/akun-guru" class="btn btn-success">Daftar</button>
+              <button type="submit" action-script="
+                location.href = '#/guru/login';
+              " data-simpan data-key="username"  get-data="guru/akun-guru" class="btn btn-success">Daftar</button>
               <a href="#/guru/login" type="button" class="btn btn-default" name="button">Log In</a>
             </div>
           </form>

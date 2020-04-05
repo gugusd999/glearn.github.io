@@ -31,7 +31,7 @@
 <div class="container-fluid mt-3">
   <div class="row">
     <div class="col-sm-12">
-      <button modal-open modal-target="id01" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+      <button modal-open modal-target="id01" table-name="guru/kelas/" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
         Buat kelas baru
       </button>
     </div>
@@ -82,7 +82,7 @@
       <div class="w3-container">
         <div class="form-group">
           <label for="">Pilih Jenjang</label>
-          <select pilihan-jenjang class="form-control" required name="jenjang">
+          <select pilihan-jenjang data-table="guru/akun-guru" name="jenjang" class="form-control">
             <option value=""> pilih </option>
             <option selected value="SD"> SD </option>
             <option value="SMP"> SMP </option>
@@ -91,7 +91,7 @@
         </div>
         <div class="form-group">
           <label for="">Pilih Kelas</label>
-          <select pilihan-kelas class="form-control" name="kelas">
+          <select pilihan-kelas data-table="guru/akun-guru" name="story" class="form-control">
             <option value="pilih"> pilih </option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -103,7 +103,9 @@
         </div>
       </div>
       <footer class="w3-container w3-blue">
-        <p>Modal Footer</p>
+        <button data-simpan data-key="story" action-script="
+          $('body #id01').css('display', 'none');
+        " get-data="guru/akun-guru" type="button" >Simpan</button>
       </footer>
     </div>
   </div>

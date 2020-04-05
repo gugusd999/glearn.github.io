@@ -1,4 +1,4 @@
-define(['jquery', 'main', 'helper', 'frb'], function($, main, helper, frb, firebase) {
+define(['jquery', 'main', 'helper', 'frb', '@firebase/app', '@firebase/database'], function($, main, helper, frb, firebase) {
 
   const dashboard = {
     view: async function() {
@@ -6,6 +6,16 @@ define(['jquery', 'main', 'helper', 'frb'], function($, main, helper, frb, fireb
         location.href="#/guru/login";
       }else{
         await helper.template('html/guru/ruangkelas.html');
+
+        // dapatkan data guru
+        let dataLogin = helper.decryptG(helper.sesiGet('glearn-guru'));
+
+        // dapatkan data ruang kelas
+        firebase.database().ref('guru/kelas/'+dataLogin.username).once('value').then((value) => {
+          console.log(value.val());
+        })
+
+
       }
     }
   }

@@ -50,6 +50,7 @@ define(['jquery', 'helper', 'select2'], function($, helper, select2){
     let Div = $(this).attr('data-position');
 
     helper.printDiv(Div);
+
   })
 
 
@@ -62,6 +63,12 @@ define(['jquery', 'helper', 'select2'], function($, helper, select2){
 
     $(`body [modal-close]`).attr('modal-target', target);
 
+    let nameTable = $(this).attr('table-name');
+
+    let dataLogin = helper.decryptG(helper.sesiGet('glearn-guru'));
+
+    $('body [data-table]').attr('data-table', nameTable+dataLogin.username);
+    $('body [get-data]').attr('get-data', nameTable+dataLogin.username);
 
   })
 

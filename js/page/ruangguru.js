@@ -5,6 +5,13 @@ define(['jquery', 'main', 'helper', 'frb'], function($, main, helper, frb, fireb
         location.href="#/guru/login";
       }else{
         await helper.template('html/ruangguru.html');
+
+        // tampilkan nama Guru
+
+        let dataLogin = helper.decryptG(helper.sesiGet('glearn-guru'));
+
+        document.querySelector("#nama-guru").innerHTML = dataLogin.nama;
+
       }
     }
   }

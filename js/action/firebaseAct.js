@@ -101,7 +101,7 @@ function login(obj, key, tableName, auth){
 }
 
 
-function create(obj, key, tableName){
+function create(obj, key, tableName, action){
   obj.forEach((res) => {
     formIsi(
       res.getAttribute('data-table'),
@@ -125,8 +125,7 @@ function create(obj, key, tableName){
   firebase.database().ref(path).once('value').then(res => {
     if (res.val() === null) {
       firebase.database().ref(path).set(data).then(function(){
-          alert('data disimpan silahkan login');
-          location.href = '#/guru/login';
+          eval(action);
       });
     }else{
       alert('maaf username sudah digunakan');
@@ -177,6 +176,8 @@ $("body").on('click', '[data-login]', function(event){
 
     let key = $(this).attr('data-key');
 
+    let action = $(this).attr('action-script');
+
     let validate = Array.from(dataO).filter((item) => {
       if (item.value === "") {
         return item;
@@ -184,7 +185,7 @@ $("body").on('click', '[data-login]', function(event){
     });
 
     if (validate.length === 0) {
-        create(dataO, key, tableName);
+        create(dataO, key, tableName, action);
     }else{
         validate[0].focus();
     }

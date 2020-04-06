@@ -1,4 +1,8 @@
-define(['jquery', 'helper', 'select2', 'frb' , '@firebase/app', '@firebase/auth', '@firebase/database'], function($, helper, select2, frb, firebase){
+define(['jquery', 'helper', 'select2', 'frb'
+, 'ruangkelas'
+, '@firebase/app', '@firebase/auth', '@firebase/database'], function($, helper, select2, frb
+, ruangkelas
+, firebase){
 
 
 let formdata = [];

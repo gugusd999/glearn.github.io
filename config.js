@@ -22,6 +22,7 @@
         terbilang: "lib/terbilang.min",
         main: "page/config/main",
         baseurl: "page/config/baseurl",
+        ruangkelas: 'page/guru/ruangkelas_lib',
         "datatables.net": 'lib/jquery.dataTables.min',
         "datatables": 'lib/dataTables.bootstrap4.min',
         inputmask: "lib/dist/inputmask",

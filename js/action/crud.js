@@ -77,9 +77,7 @@ define(['jquery', 'crud', 'crud2', 'axios', 'helper'], function($, crud, crud2, 
       helper.localNew(namaTable, helper.encryptG(tableD));
 
       crud.edit(namaTable);
-
     });
-
   })
 
   function delay(callback, ms) {

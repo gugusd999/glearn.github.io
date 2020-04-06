@@ -115,5 +115,4 @@ define(['jquery', 'helper', 'select2'], function($, helper, select2){
 
   })
 
-
 })

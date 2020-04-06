@@ -39,22 +39,8 @@
 </div>
 
 <div class="container-fluid mt-3" style="min-height: 300px;">
-  <div class="row">
-    <a href="#/ruang-guru/ruang-kelas" class="col-sm-6  mt-3">
-      <div class="card">
-        <div class="card-body text-center" id="crud">
-          <div class="row">
-            <div class="col-sm-4">
-              <img class="img-fluid img-menu" src="./asset/icon-siswa.png" alt="">
-            </div>
-            <div class="col-sm-8 text-left">
-              <span style="font-size: 20px; font-weight: 700; color: black;">Ruang Kelas</span>
-              <p class="text-dark">Yuk buat kelas untuk siswa</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
+  <div class="row" id="syfaul-container">
+
   </div>
 </div>
 </div>
@@ -91,7 +77,7 @@
         </div>
         <div class="form-group">
           <label for="">Pilih Kelas</label>
-          <select pilihan-kelas data-table="guru/akun-guru" name="story" class="form-control">
+          <select pilihan-kelas data-table="guru/akun-guru" name="kelas" class="form-control">
             <option value="pilih"> pilih </option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -103,8 +89,9 @@
         </div>
       </div>
       <footer class="w3-container w3-blue">
-        <button data-simpan data-key="story" action-script="
+        <button data-simpan data-key="kelas" action-script="
           $('body #id01').css('display', 'none');
+          ruangkelas.menu();
         " get-data="guru/akun-guru" type="button" >Simpan</button>
       </footer>
     </div>

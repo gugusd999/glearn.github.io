@@ -53,6 +53,10 @@
 						this.get('#/ruang-guru/ruang-kelas', function() {
 							ruangkelas.view();
 						});
+						this.get('#/ruang-guru/kelas/:kelas', function() {
+							let id = this.params['kelas'];
+							console.log(id);
+						});
 					});
 					app.run("#/");
 			});

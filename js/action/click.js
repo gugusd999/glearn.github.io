@@ -105,7 +105,7 @@ define(['jquery', 'helper', 'select2'], function($, helper, select2){
       }
     }
 
-    if (nilai === "SMA/K") {
+    if (nilai === "SMA-K") {
       for (var i = 10; i <= 12; i++) {
         option += `<option value="${i}"> ${i} </option>`;
       }

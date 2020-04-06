@@ -13,7 +13,7 @@ define(['jquery', 'helper', 'frb', '@firebase/app', '@firebase/database'], funct
             let {jenjang, kelas} = item;
             return  `
 
-            <a href="#/ruang-guru/ruang-kelas" class="col-sm-6  mt-3">
+            <a href="#/ruang-guru/kelas/${jenjang}-${kelas}" class="col-sm-6  mt-3">
               <div class="card">
                 <div class="card-body text-center" id="crud">
                   <div class="row">
